@@ -1,0 +1,140 @@
+/* Base resets */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #fdfdfd; /* light neutral */
+  color: #1a1a1a;
+  scroll-behavior: smooth;
+}
+
+/* Hero Section */
+.hero-section {
+  background-image: linear-gradient(to right, #3a3a3a, #1f1f1f);
+  color: #E7D3BB;
+  text-align: center;
+  padding: 100px 20px 80px;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 3rem;
+  color: #e6660b;
+  max-width: 600px;
+  margin: auto;
+}
+
+.cta-button {
+  margin-top: 2rem;
+  background-color: brown; /* Olive Green */
+  color: #ffffff;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  font-weight: bold;
+}
+
+.cta-button:hover {
+  background-color:rgb(192, 94, 94);
+  color: #ffffff;
+}
+
+/* Features Section */
+.features {
+  padding: 80px 20px;
+  background-color: #eeeeee;
+  text-align: center;
+}
+
+.features h2 {
+  font-size: 2.5rem;
+  color: #333333;
+  margin-bottom: 2rem;
+}
+
+.feature-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.feature-card {
+  background-color: #ffffff;
+  padding: 20px;
+  width: 250px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+  color: #333333;
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.feature-card h3 {
+  color:brown;
+}
+
+/* Contact Section */
+.contact-section {
+  padding: 60px 20px;
+  background-color: #2f2f2f;
+  text-align: center;
+}
+
+.contact-section h2 {
+  font-size: 2rem;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.contact-section p {
+  color: #dddddd;
+  font-size: 1.1rem;
+}
+
+.cta-button.secondary {
+  background-color: transparent;
+  color: brown;
+  border: 2px solid brown;
+  margin-top: 20px;
+}
+
+.cta-button.secondary:hover {
+  background-color:brown;
+  color: white;
+  border-color: brown;
+}
+
+/* Footer */
+.footer {
+  background-color: #1f1f1f;
+  color: #cccccc;
+  padding: 20px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.section-intro {
+  color: #666666;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
+

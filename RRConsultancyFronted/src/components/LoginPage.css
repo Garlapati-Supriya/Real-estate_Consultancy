@@ -1,0 +1,114 @@
+/* Reset basics */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f5f7fa;
+}
+
+/* Container for the whole page */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Wrapper box */
+.login-box {
+  display: flex;
+  width: 90%;
+  max-width: 1000px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  overflow: hidden;
+  flex-direction: row;
+}
+
+
+
+
+
+/* Right login form side */
+.login-right {
+  flex: 1;
+  padding: 40px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login-right .logo {
+  width: 120px;
+  margin-bottom: 20px;
+}
+
+.login-right h2 {
+  margin-bottom: 20px;
+}
+
+.login-right form {
+  width: 100%;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+.login-right input {
+  padding: 12px 14px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.login-right button {
+  padding: 12px;
+  background-color: #b11e1e;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.login-right button:disabled {
+  background-color: #b72424;
+  cursor: not-allowed;
+}
+
+.login-right p {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.login-right a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.login-right a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive for mobile */
+@media (max-width: 768px) {
+  .login-box {
+    flex-direction: column;
+  }
+
+  .login-left, .login-right {
+    border: none;
+  }
+
+  .login-left {
+    padding: 20px;
+  }
+
+  .login-right {
+    padding: 20px;
+  }
+}

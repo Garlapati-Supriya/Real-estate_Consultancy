@@ -1,0 +1,363 @@
+/* Base Layout */
+.dashboard {
+  background-color:white;
+  min-height: 100vh;
+  color: #333;
+  padding-bottom: 40px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  padding: 5px 5px 5px;
+  background-color:rgb(215, 213, 209);
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.header h1 {
+  color: brown;
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.header p {
+  color: #666;
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: auto;
+}
+
+/* Search Bar */
+.search-input {
+  padding: 10px 15px;
+  margin-left: 20px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  background-color: #f0f0f0;
+  color: #333;
+  transition: border-color 0.3s ease;
+}
+
+.search-input:focus {
+  border-color: #6a0dad;
+}
+
+/* Instructions Section */
+.instructions-section {
+  padding: 10px 10px;
+  background-color:rgb(215, 213, 209);
+}
+
+.instructions-section h2 {
+  text-align: center;
+  color:rgb(100, 183, 121);
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+}
+
+.instructions-slider {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  padding: 10px 0;
+  scroll-behavior: smooth;
+}
+
+.instruction-card {
+  flex: 0 0 auto;
+  background-color: #ffffff;
+  color: #444;
+  padding: 18px;
+  border-radius: 10px;
+  min-width: 220px;
+  font-weight: 600;
+  text-align: center;
+  border: 1px solid #ddd;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.instruction-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px #ccc;
+}
+
+/* Property Grid */
+.properties-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  padding: 40px 20px;
+
+}
+
+/* Property Card */
+.property-card {
+  background-color:rgb(215, 213, 209);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.property-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
+}
+
+.property-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-bottom: 2px solid #eee;
+}
+
+.tag {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: rgb(196, 159, 13);
+  color: #ffffff;
+  font-size: 0.75rem;
+  padding: 5px 10px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+/* Property Info */
+.property-info {
+  padding: 16px;
+}
+
+.property-info h2 {
+  font-size: 1.3rem;
+  margin-bottom: 8px;
+  color: #222;
+}
+
+.property-info p {
+  color: #555;
+  margin: 0 0 8px;
+}
+
+.property-info .price {
+  font-weight: bold;
+  color: #111;
+  font-size: 1.1rem;
+  display: block;
+  margin-bottom: 12px;
+}
+
+/* Wishlist Button */
+.wishlist-btn {
+  background-color: transparent;
+  border: 1px solid  #ce6204;
+  color:  #c28e15;
+  padding: 7px 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.wishlist-btn:hover {
+  background-color:  #ce750f;
+  color: #ffffff;
+}
+
+.wishlist-btn.active {
+  background-color:  #c2821b;
+  color: #ffffff;
+  border-color: #c9800a;
+}
+
+/* No Results */
+.no-results {
+  color: #cc0000;
+  text-align: center;
+  font-size: 1.2rem;
+  margin-top: 50px;
+}
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.top-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color:rgb(187, 17, 5);
+  color: white;
+  padding: 10px 20px;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 50px;
+}
+
+
+.search-input {
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: none;
+}
+
+.sort-options select {
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: none;
+}
+
+.main-content {
+  display: flex;
+  flex: 1;
+}
+
+.sidebar {
+  width: 200px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  border-right: 1px solid #ccc;
+}
+
+.sidebar h3 {
+  margin-bottom: 5px;
+}
+
+.sidebar button {
+  display: block;
+  margin: 10px 0;
+  padding: 8px;
+  width: 100%;
+  border: none;
+  background-color:rgb(188, 9, 9);
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.dashboard {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.instructions-section {
+  margin-top: 20px;
+}
+
+.instructions-slider {
+  display: flex;
+  overflow-x: auto;
+  gap: 10px;
+  scroll-behavior: smooth;
+}
+
+.instruction-card {
+  min-width: 250px;
+  padding: 15px;
+  background: #f0f0f0;
+  border-radius: 10px;
+}
+
+.properties-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.property-card {
+  background:rgb(215, 213, 209);
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.property-card:hover {
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.property-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.property-info {
+  padding: 15px;
+}
+
+
+
+.wishlist-btn {
+  margin-top: 10px;
+  background-color: #eee;
+  border: none;
+  padding: 8px;
+  width: 100%;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.wishlist-btn.active {
+  background-color: #ffcccc;
+}
+/* Hamburger icon */
+.hamburger {
+  background: none;
+  border: none;
+  font-size: 16px;
+  margin: 0;                /* Remove margin to stick left */
+  padding: 4px;
+  cursor: pointer;
+  color: white;
+  width:10%;
+}
+
+
+/* Sidebar base styles */
+.sidebar {
+  width: 220px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  border-right: 1px solid #ccc;
+  transition: transform 0.3s ease-in-out;
+}
+
+.sidebar.closed {
+  transform: translateX(-100%);
+  width: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.sidebar.open {
+  transform: translateX(0);
+}
+
+/* Ensure main-content adapts when sidebar is closed */
+.main-content {
+  display: flex;
+  flex: 1;
+  transition: margin-left 0.3s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    position: absolute;
+    height: 100%;
+    z-index: 10;
+  }
+}
+
