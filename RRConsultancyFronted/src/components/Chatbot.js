@@ -133,7 +133,7 @@ const normalize = (v) => (v || "").toString().toLowerCase().trim();
   const handleBudgetApply = async () => {
     try {
       const res = await fetch(
-        `http://localhost:4000/api/chatbot/properties?search=${selectedLocation}`
+        `${apiUrl}/api/chatbot/properties?search=${selectedLocation}`
       );
       const data = await res.json();
 
