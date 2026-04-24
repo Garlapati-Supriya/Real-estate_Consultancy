@@ -13,7 +13,7 @@ const AdminLoginPage = () => {
     setError('');
 
     try {
-      const res = await fetch('http://localhost:4000/api/admin', {
+      const res = await fetch(`${apiUrl}/api/admin`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         credentials: 'include',
