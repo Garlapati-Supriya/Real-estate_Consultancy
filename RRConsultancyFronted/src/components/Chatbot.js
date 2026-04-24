@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import "./Chatbot.css";
 import { useNavigate } from "react-router-dom";
+const apiUrl = process.env.REACT_APP_API_URL;
 
 function Chatbot() {
   const navigate = useNavigate();
