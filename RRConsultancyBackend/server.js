@@ -24,7 +24,7 @@ app.use(cors({ origin: 'https://estate-frontend-l2u4.onrender.com',
   credentials: true
 }));
 app.use(express.json());
-app.use('${BACKEND_URL}/uploads', express.static(path.join(__dirname, 'uploads')));
+app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 app.use('/',userRouter);
 
 // Auth Middleware
