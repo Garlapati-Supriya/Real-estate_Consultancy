@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Adminlogin.css';
 import { useNavigate } from 'react-router-dom';
-
+const apiUrl = process.env.REACT_APP_API_URL;
 const AdminLoginPage = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
