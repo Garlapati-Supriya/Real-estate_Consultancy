@@ -87,9 +87,9 @@ const upload = multer({ storage });
 // Upload Property
 app.post('/api/properties', authMiddleware, upload.fields([{ name: 'images' }, { name: 'video', maxCount: 1 }, { name: 'documents' }]), async (req, res) => {
   try {
-    const images = (req.files['images'] || []).map(f => `${BACKEND_URL}/uploads/images/${f.filename}`);
-    const video = req.files['video'] ? `${BACKEND_URL}/uploads/videos/${req.files['video'][0].filename}` : null;
-    const documents = (req.files['documents'] || []).map(f => `${BACKEND_URL}/uploads/documents/${f.filename}`);
+    const images = (req.files['images'] || []).map(f => `/uploads/images/${f.filename}`);
+    const video = req.files['video'] ? `/uploads/videos/${req.files['video'][0].filename}` : null;
+    const documents = (req.files['documents'] || []).map(f => `/uploads/documents/${f.filename}`);
     const property = new Property({
       ...req.body,
       ownerId: req.user.id,
@@ -138,9 +138,9 @@ app.put('/api/property/:id', upload.fields([{ name: 'images' }, { name: 'video',
     if (!existingProperty) return res.status(404).json({ message: 'Property not found' });
 
     const { existingImages, existingVideo, existingDocuments } = req.body;
-    const newImages = (req.files['images'] || []).map(f => `${BACKEND_URL}/uploads/images/${f.filename}`);
-    const newVideo = req.files['video']?.[0] ? `${BACKEND_URL}/uploads/videos/${req.files['video'][0].filename}` : null;
-    const newDocuments = (req.files['documents'] || []).map(f => `${BACKEND_URL}/uploads/documents/${f.filename}`);
+    const newImages = (req.files['images'] || []).map(f => `/uploads/images/${f.filename}`);
+    const newVideo = req.files['video']?.[0] ? `/uploads/videos/${req.files['video'][0].filename}` : null;
+    const newDocuments = (req.files['documents'] || []).map(f => `/uploads/documents/${f.filename}`);
 
     const updatedImages = JSON.parse(existingImages || '[]');
     const updatedDocs = JSON.parse(existingDocuments || '[]');
